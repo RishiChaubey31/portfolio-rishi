@@ -2,143 +2,177 @@ html, body {
     height: 100%;
     margin: 0;
     color: white;
-    
 }
 
 body {
-    background:linear-gradient(to bottom,black,rgb(4, 4, 75)); /* Replace #yourColor with your desired color */
+    background: linear-gradient(to bottom, black, rgb(4, 4, 75));
     background-attachment: fixed;
     font-family: 'Source Code Pro', monospace;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-.signature{
+
+.signature {
     margin-top: 0.5vh;
-    width: 50vh;
-    height: 16vh;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     filter: drop-shadow(4px 4px 3px rgb(197, 194, 14));
-    
-}
-.NavBar{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.NavLeft{
- display: flex;
- flex-wrap: nowrap;
- font-size: 4vh;
- list-style-type: none;
- padding-top: 4vh;
- padding-left: 0%;
- gap:2vh;
-}
-.NavRight{
-    display: flex;
- flex-wrap: nowrap;
- list-style-type: none;
- padding-left:2vh;
- padding-top: 7vh;
- gap:6vh;
-}
-/*.datanav{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan;
-}
-.datanav:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan ,0 0 50px cyan,
-    0 0 100px cyan,0 0 200px cyan ;
-} */
-
-.datanav{
-    border-radius: 10%;
 }
 
-#home{
-    background-color: rgba(185, 23, 23, 0.635);
-    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
-    0 0 25px rgba(185, 23, 23, 0.635);  
-}
-#home:hover{
-    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
-    0 0 25px rgba(185, 23, 23, 0.635) ,0 0 50px  rgba(185, 23, 23, 0.635 ),
-    0 0 100px rgba(185, 23, 23, 0.635),0 0 200px rgba(185, 23, 23, 0.635) ;
-}
-
-#About{
-    background-color: green;
-    box-shadow: 0 0 5px green,
-    0 0 25px green;  
-}
-#About:hover{
-    box-shadow: 0 0 5px green,
-    0 0 25px green ,0 0 50px  green,
-    0 0 100px green,0 0 200px green;
-}
-
-#Projects{
-    background-color:blueviolet;
-    box-shadow: 0 0 5px blueviolet,
-    0 0 25px blueviolet;  
-}
-#Projects:hover{
-    box-shadow: 0 0 5px blueviolet,
-    0 0 25px blueviolet ,0 0 50px  blueviolet,
-    0 0 100px blueviolet,0 0 200px blueviolet ;
-}
-
-#Contact{
-    background-color:rgb(43, 83, 226);
-    box-shadow: 0 0 5px rgb(43, 83, 226),
-    0 0 25px rgb(43, 83, 226);  
-}
-#Contact:hover{
-    box-shadow: 0 0 5px  rgb(43, 83, 226) ,
-    0 0 25px  rgb(43, 83, 226) ,0 0 50px   rgb(43, 83, 226),
-    0 0 100px  rgb(43, 83, 226),0 0 200px  rgb(43, 83, 226) ;
-}
-#Home{
+.NavBar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 1rem;
 }
-.description{
+
+.NavLeft, .NavRight {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.NavLeft {
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+.NavRight {
+    gap: 1rem;
+}
+
+.handles img {
+    height: 30px;
+    width: auto;
+}
+
+.datanav {
+    border-radius: 10%;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#home {
+    background-color: rgba(185, 23, 23, 0.635);
+    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
+                0 0 25px rgba(185, 23, 23, 0.635);  
+}
+#home:hover {
+    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
+                0 0 25px rgba(185, 23, 23, 0.635),
+                0 0 50px rgba(185, 23, 23, 0.635),
+                0 0 100px rgba(185, 23, 23, 0.635);
+}
+
+#About {
+    background-color: green;
+    box-shadow: 0 0 5px green, 0 0 25px green;  
+}
+#About:hover {
+    box-shadow: 0 0 5px green, 0 0 25px green, 0 0 50px green, 0 0 100px green;
+}
+
+#Projects {
+    background-color: blueviolet;
+    box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;  
+}
+#Projects:hover {
+    box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet, 0 0 50px blueviolet, 0 0 100px blueviolet;
+}
+
+#Contact {
+    background-color: rgb(43, 83, 226);
+    box-shadow: 0 0 5px rgb(43, 83, 226), 0 0 25px rgb(43, 83, 226);  
+}
+#Contact:hover {
+    box-shadow: 0 0 5px rgb(43, 83, 226), 0 0 25px rgb(43, 83, 226), 0 0 50px rgb(43, 83, 226), 0 0 100px rgb(43, 83, 226);
+}
+
+#Home {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    
+    padding: 1rem;
+    text-align: center;
 }
 
-.aboutme{
-    font-size: 4vh;
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme {
+    font-size: 1rem;
     font-weight: bold;
-
-    
+    text-align: justify;
+    padding: 1rem;
 }
-.craft{
-    font-size: 4vh;
-    width: 46ch;
-    animation: typing 3s steps(62), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1px solid;
-    font-family: monospace;
-    
-    
-  }
-  
-  @keyframes typing {
+
+.craft {
+    font-size: 1.5rem;
+    width: 100%;
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+    animation: none;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .NavBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .NavLeft {
+        font-size: 1.5rem;
+    }
+
+    .craft {
+        font-size: 2rem;
+        width: 46ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 1px solid;
+        animation: typing 3s steps(62), blink .5s step-end infinite alternate;
+    }
+
+    .aboutme {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .NavLeft {
+        font-size: 2rem;
+    }
+
+    .craft {
+        font-size: 2.5rem;
+    }
+
+    .aboutme {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes typing {
     from {
-      width: 0
+        width: 0
     }
-  }
+}
       
-  @keyframes blink {
+@keyframes blink {
     50% {
-      border-color: transparent
+        border-color: transparent
     }
-  }
+}
