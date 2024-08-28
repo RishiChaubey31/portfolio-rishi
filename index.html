@@ -14,8 +14,8 @@
             <ul class="NavLeft">
                 <li class="datanav" id="home"><a href="#Home" >Home</a></li>
                 <li class="datanav" id="about"><a href="#About" >About</a></li>
-                <li class="datanav" id="Projects"><a href="#Projects" >Projects</a></li>
-                <li class="datanav" id="Contact"><a href="#contact"  >Contact</a></li>
+                <li class="datanav" id="projects"><a href="#Projects" >Projects</a></li>
+                <li class="datanav" id="contact"><a href="#contact"  >Contact</a></li>
             </ul>
            
             <ul class="NavRight">
@@ -98,7 +98,32 @@
        
     </section>
     <section id="Projects">
-     
+        <div>
+            <h1> $ npm run dev
+                <div class="loading">
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </div>
+                </h1>
+        </div>
+        <div class="container">
+            <div class="work">
+                <div class="work-inner">
+                    <a href="https://choretrekker.netlify.app/" target="_blank"><img src="assets/choretrekkerlink.png" alt="Chore Trekker"></a>
+                    <h1>Chore Trekker</h1>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work-inner">
+                    <a href="https://rishitech.netlify.app/" target="_blank"><img src="assets/portfoliolink.png" alt="Portfolio"></a>
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Contact">
+        
     </section>
     <script>
         document.querySelectorAll('.NavLeft a, .NavRight a').forEach(anchor => {
@@ -114,6 +139,25 @@
                         });
                     }
                 }
+            });
+        });
+        document.querySelectorAll('.work').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.querySelector('.work-inner').style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.work-inner').style.transform = 'rotateX(0) rotateY(0)';
             });
         });
     </script>
