@@ -667,6 +667,13 @@ body {
             max-width: 400px;
         }
     }
+    #Contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(91, 158, 182, 0.409);
+    }
     
     
     
