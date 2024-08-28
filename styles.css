@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    color: white;
+    
+}
+
+body {
+    background:linear-gradient(to bottom,black,rgb(4, 4, 75)); /* Replace #yourColor with your desired color */
+    background-attachment: fixed;
+    font-family: 'Source Code Pro', monospace;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.signature{
+    margin-top: 0.5vh;
+    width: 50vh;
+    height: 16vh;
+    filter: drop-shadow(4px 4px 3px rgb(197, 194, 14));
+    
+}
+.NavBar{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.NavLeft{
+ display: flex;
+ flex-wrap: nowrap;
+ font-size: 4vh;
+ list-style-type: none;
+ padding-top: 4vh;
+ padding-left: 0%;
+ gap:2vh;
+}
+.NavRight{
+    display: flex;
+ flex-wrap: nowrap;
+ list-style-type: none;
+ padding-left:2vh;
+ padding-top: 7vh;
+ gap:6vh;
+}
+/*.datanav{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+}
+.datanav:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan ,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan ;
+} */
+
+.datanav{
+    border-radius: 10%;
+}
+
+#home{
+    background-color: rgba(185, 23, 23, 0.635);
+    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
+    0 0 25px rgba(185, 23, 23, 0.635);  
+}
+#home:hover{
+    box-shadow: 0 0 5px rgba(185, 23, 23, 0.635),
+    0 0 25px rgba(185, 23, 23, 0.635) ,0 0 50px  rgba(185, 23, 23, 0.635 ),
+    0 0 100px rgba(185, 23, 23, 0.635),0 0 200px rgba(185, 23, 23, 0.635) ;
+}
+
+#About{
+    background-color: green;
+    box-shadow: 0 0 5px green,
+    0 0 25px green;  
+}
+#About:hover{
+    box-shadow: 0 0 5px green,
+    0 0 25px green ,0 0 50px  green,
+    0 0 100px green,0 0 200px green;
+}
+
+#Projects{
+    background-color:blueviolet;
+    box-shadow: 0 0 5px blueviolet,
+    0 0 25px blueviolet;  
+}
+#Projects:hover{
+    box-shadow: 0 0 5px blueviolet,
+    0 0 25px blueviolet ,0 0 50px  blueviolet,
+    0 0 100px blueviolet,0 0 200px blueviolet ;
+}
+
+#Contact{
+    background-color:rgb(43, 83, 226);
+    box-shadow: 0 0 5px rgb(43, 83, 226),
+    0 0 25px rgb(43, 83, 226);  
+}
+#Contact:hover{
+    box-shadow: 0 0 5px  rgb(43, 83, 226) ,
+    0 0 25px  rgb(43, 83, 226) ,0 0 50px   rgb(43, 83, 226),
+    0 0 100px  rgb(43, 83, 226),0 0 200px  rgb(43, 83, 226) ;
+}
+#Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.aboutme{
+    font-size: 4vh;
+    font-weight: bold;
+
+    
+}
+.craft{
+    font-size: 4vh;
+    width: 46ch;
+    animation: typing 3s steps(62), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-family: monospace;
+    
+    
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
