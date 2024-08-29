@@ -47,6 +47,17 @@
         </div>
     </section>
     <section id="About">
+        <div class="envelope-container" onclick="openResume()">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="flap-back"></div>
+            </div>
+            <p>Click to open my resume</p>
+        </div>
+        
+        
+        
         <div>
             <h1> $ npm install skills
                 <div class="loading">
@@ -93,9 +104,9 @@
             </div>
             <div class="education">
                 <h1 style="font-size: 2.5rem;margin-top: 4.5rem;">Student at A.P.J Abdul Kalam Technical University</h1>
-                <a  class="rotate" href="https://aktu.ac.in/" target="_blank"><img  src="assets/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png" alt="college"></a>
+                <a  class="rotate" href="https://aktu.ac.in/" target="_blank"><img style="height: 150px;" src="assets/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png" alt="college"></a>
 
-                <h1 style="font-size:3rem;">current GPA -:<span style="color: rgb(195, 43, 226);"> 8.04</span></h1>
+                <h1 style="font-size:3rem;">current GPA -:<span style="color: rgb(195, 43, 226);"> 8.05</span></h1>
             </div>
         </div>
        
@@ -126,8 +137,9 @@
         </div>
     </section>
     <section id="Contact">
-        <!--<h1>Contact me @ cenationrishi31@gmail.com</h1> -->
-       
+        
+       <h1 class="shine">Feel free to connect with me here</h1>
+       <h1 class="shine">"Networking is the real wealth"</h1>
         <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <p>
@@ -140,12 +152,12 @@
               <label>Message: <textarea name="message"></textarea></label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button  class="button button-neon" type="submit">Send</button>
             </p>
           </form>
           
         <br>
-        <h1>made with &hearts; beats by Rishi  </h1>
+        <h1>made with &hearts;  by Rishi  </h1>
     </section>
     <script>
         document.querySelectorAll('.NavLeft a, .NavRight a').forEach(anchor => {
@@ -182,6 +194,9 @@
                 card.querySelector('.work-inner').style.transform = 'rotateX(0) rotateY(0)';
             });
         });
+        function openResume() {
+                window.open('assets/Resume.pdf', '_blank');
+            }
     </script>
 </body>
 </html>
