@@ -715,7 +715,9 @@ body {
         color: #000;
     }
     .shine{
-        color: rgb(205, 216, 42);
+        background: linear-gradient(90deg, #D8B5FF,#1EAE98);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
        
     }
@@ -731,7 +733,7 @@ body {
         width: 100px;
         height: 60px;
         position: relative;
-        background-color: #f1f1f1;
+        background-color: white;
         border: 2px solid #ccc;
         border-radius: 5px;
     }
@@ -739,7 +741,7 @@ body {
     .envelope .flap {
         width: 100%;
         height: 50%;
-        background-color: #ddd;
+        background-color: red;
         position: absolute;
         top: 0;
         left: 0;
@@ -751,7 +753,7 @@ body {
     .envelope .flap-back {
         width: 100%;
         height: 50%;
-        background-color: #ddd;
+        background-color: red;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -761,6 +763,12 @@ body {
     .envelope-container:hover .flap {
         transform: rotateX(180deg);
     }
+.craft{
+    background: linear-gradient(90deg, #D8B5FF,#1EAE98);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
     
 
     
