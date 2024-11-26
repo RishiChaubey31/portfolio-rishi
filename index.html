@@ -9,10 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="background">
+        <canvas id="canvas"></canvas>
+    </div>
     <header>
            
         <nav class="NavBar">
-            <a  href="" target="_blank"><img class="signature" src="assets/signature3.png" alt="Rishi Chaubey"></a>
+            <div class="signature">
+                <a href="" target="_blank">
+                    <img class="signature-content" src="assets/signature3.png" alt="Rishi Chaubey">
+                </a>
+            </div>
             <ul class="NavLeft">
                 <li class="datanav" id="home"><a href="#Home" >Home</a></li>
                 <li class="datanav" id="about"><a href="#About" >About</a></li>
@@ -212,6 +219,86 @@
         function openResume() {
                 window.open('assets/MYResume.pdf', '_blank');
             }
+            const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Resize canvas to window
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Particle class
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.speedY = (Math.random() - 0.5) * 2;
+                this.color = `hsla(${Math.random() * 200 + 200}, 70%, 60%, 0.7)`;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Wrap around screen
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        // Create particles and connect them
+        const particleCount = 120;
+        const particles = Array.from({ length: particleCount }, () => new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw connections between close particles
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `hsla(${Math.random() * 200 + 200}, 50%, 50%, ${1 - distance / 120})`;
+                        ctx.lineWidth = 1 - distance / 120;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Update and draw particles
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
     </script>
 </body>
 </html>
