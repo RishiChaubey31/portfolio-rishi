@@ -56,7 +56,7 @@ a {
     content: '';
     position: absolute;
     inset: 2px;
-    background: rgb(1, 1, 24);
+    background: none;
     z-index: 1;
 }
 
@@ -103,11 +103,25 @@ a {
 
 .NavRight {
     gap: 1rem;
+    background-color: rgb(85 35 83 / 61%);
+    padding: 12px 12px;
+    border: 12px solid gray;
+    border-radius: 20px;
+    box-shadow:  5px 5px 5px 0px rgba(255, 253, 253, 0.3);
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
 }
+
 
 .handles img {
     height: 30px;
     width: auto;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+}
+
+.handles img:hover{
+    transform: scale(2);
 }
 
 .datanav {
@@ -151,6 +165,13 @@ a {
 }
 #contact:hover {
     box-shadow: 0 0 5px rgb(43, 83, 226), 0 0 25px rgb(43, 83, 226), 0 0 50px rgb(43, 83, 226), 0 0 100px rgb(43, 83, 226);
+}
+#experience {
+    background-color: rgb(209, 135, 15);
+    box-shadow: 0 0 5px rgb(209, 135, 15), 0 0 25px rgb(209, 135, 15);  
+}
+#experience:hover {
+    box-shadow: 0 0 5px rgb(209, 135, 15), 0 0 25px rgb(209, 135, 15), 0 0 50px rgb(209, 135, 15), 0 0 100px rgb(209, 135, 15);
 }
 
 #Home {
@@ -578,7 +599,7 @@ body {
 .aboutme h1 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: rgb(166, 255, 0);
+    color: rgb(226, 186, 25);
     transition: all 0.3s ease;
 }
 
@@ -592,7 +613,6 @@ body {
 }
 
 .aboutme span:hover {
-    color: rgb(166, 255, 0);
     transform: scale(1.1);
 }
 
@@ -603,7 +623,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(166, 255, 0, 0.1), transparent);
+    background: linear-gradient(45deg, rgba(93, 7, 197, 0.366), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -826,8 +846,8 @@ body {
 }
 .education{
     
-    border:20px solid rgba(128, 0, 128, 0.614);
-    border-radius: 20%;
+      background-color: #320cad2d;
+    border-radius: 48px;
     padding: 25px;
 }
 
