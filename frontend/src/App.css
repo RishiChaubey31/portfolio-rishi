@@ -1,0 +1,32 @@
+/* Floating images stay behind buttons but remain clickable */
+.floating-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10; /* Lower than buttons */
+  pointer-events: none;
+}
+
+.floatingImage {
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 11; /* Above text but below buttons */
+}
+
+/* Ensure all buttons appear above floating images */
+a,button {
+  position: relative;
+  z-index: 20; /* Higher than floating images */
+}
+
+.Home{
+    z-index: 5;
+}
+
+body{
+    font-family: orbitron;
+}
+
