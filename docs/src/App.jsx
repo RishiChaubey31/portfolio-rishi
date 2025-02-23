@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import { SparklesCore } from "./components/sparkles";
+import { SparklesCore } from "./components/Sparkles";
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
