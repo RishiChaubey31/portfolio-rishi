@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -83,15 +84,16 @@ function About() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 
-            hover:from-pink-700 hover:via-purple-800 hover:to-blue-900
-            text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-sm sm:text-lg 
-            shadow-lg transition-transform transform hover:scale-110 neon-glow"
-          >
-            Let's Connect 🌌
-          </a>
+         <Link
+  to="/contact"
+  className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 
+  hover:from-pink-700 hover:via-purple-800 hover:to-blue-900
+  text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-sm sm:text-lg 
+  shadow-lg transition-transform transform hover:scale-110 neon-glow"
+>
+  Let's Connect 🌌
+</Link>
+
         </motion.div>
       </div>
     </section>

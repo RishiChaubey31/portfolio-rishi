@@ -4,13 +4,19 @@ function Blogs() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@your_username")
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@rishichaubey3105")
       .then((response) => response.json())
       .then((data) => {
-        setBlogs(data.items.slice(0, 5)); // Show only the latest 5 blogs
+        if (data.items) {
+          setBlogs(data.items.slice(0, 5));
+        } else {
+          console.error("Invalid response structure:", data);
+          setBlogs([]); // Avoid breaking UI
+        }
       })
       .catch((error) => console.error("Error fetching Medium blogs:", error));
   }, []);
+  
 
   return (
     <div className="w-full flex flex-col items-center py-12 bg-black min-h-screen">
