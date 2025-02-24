@@ -75,7 +75,7 @@ const ContactSection = () => {
 
             <div className="flex items-center space-x-4 text-slate-400">
               <Mail className="w-6 h-6" />
-              <a href="mailto:your.email@example.com" className="hover:text-purple-400 transition-colors">
+              <a href="rishichaubey3105@gmail.com" className="hover:text-purple-400 transition-colors">
                 rishichaubey3105@gmail.com
               </a>
             </div>
