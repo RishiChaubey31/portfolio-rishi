@@ -7,7 +7,7 @@ const Experience = () => {
     {
       title: "Role-Based User Mentions",
       description:
-        "Implemented dynamic role-based mentions in the Real Dev Squad Discord bot, improving user interactions.",
+        "Implemented dynamic role-based mentions in the Real Dev Squad Discord bot, improving user interactions, and implemented feature flag and wrote unit test for it",
       githubUrl: "https://github.com/Real-Dev-Squad/discord-slash-commands/pull/280/",
       tags: ["TypeScript", "Firebase", "Cloudflare Workers"],
     },

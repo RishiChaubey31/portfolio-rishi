@@ -30,3 +30,9 @@ body{
     font-family: orbitron;
 }
 
+@layer utilities {
+  .shadow-neon {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+  }
+}
+
