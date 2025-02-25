@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import Resume from "./pages/Resume";
 import Blogs from "./pages/Blogs";
+
 // Define images with sound mappings
 const images = [
   { src: "/spacemen.png", sound: "/hello1.mp3" },
@@ -26,27 +27,28 @@ const images = [
 
 function App() {
   useEffect(() => {
-    const floatingContainer = document.querySelector(
-      ".floating-image-container"
-    );
-
+    const floatingContainer = document.querySelector(".floating-image-container");
     if (!floatingContainer) return;
 
     floatingContainer.innerHTML = ""; // Clear previous images
 
-    const imgElements = images.map(({ src, sound }) => {
+    // Check if the device is mobile
+    const isMobile = window.innerWidth < 768;
+
+    const filteredImages = isMobile
+      ? images.filter(({ src }) => src.includes("spacemen.png")) // Keep only astronaut on mobile
+      : images; // Keep all images on desktop
+
+    const imgElements = filteredImages.map(({ src, sound }) => {
       const img = document.createElement("img");
       img.src = src;
       img.className = "floatingImage";
-      img.style.position = "absolute"; // Ensure absolute positioning
-      img.style.cursor = "pointer"; // Make it clickable
-      img.style.pointerEvents = "auto"; // Allow event handling
+      img.style.position = "absolute";
+      img.style.cursor = "pointer";
+      img.style.pointerEvents = "auto";
 
-      if (src.includes("asteroid.png") || src.includes("spacemen.png")) {
-        img.style.width = "50px"; // Smaller size
-      } else {
-        img.style.width = "200px"; // Default size
-      }
+      img.style.width = src.includes("spacemen.png") ? "50px" : "200px"; // Adjust size
+      img.style.width = src.includes("asteroid.png") || src.includes("spacemen.png") ? "50px" : "200px";
 
       // **🔊 Play sound on click**
       img.addEventListener("click", () => {
@@ -110,15 +112,15 @@ function App() {
         />
 
         <NavBar />
-       
+
         <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} /> 
+          <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path ="/resume" element={<Resume />} />
-          <Route path="/blog" element={<Blogs/>} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/blog" element={<Blogs />} />
         </Routes>
       </div>
     </SparklesCore>
