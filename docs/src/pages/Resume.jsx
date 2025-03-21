@@ -9,7 +9,7 @@ const ResumeSection = () => {
         <p className="mt-2 text-gray-400">Download my resume or explore my experience and skills below.</p>
         <div className="mt-2">
           <a
-            href="/rishisresume.pdf"
+            href="/rishiresume2.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-500 transition-all"
