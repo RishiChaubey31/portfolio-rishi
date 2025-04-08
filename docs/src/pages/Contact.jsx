@@ -11,7 +11,8 @@ const ContactSection = () => {
     { name: 'X', icon: <Twitter />, url: 'https://x.com/cenation_rishi', color: 'hover:text-blue-400' },
     { name: 'LeetCode', icon: <ExternalLink />, url: 'https://leetcode.com/u/rishi_chaubey/', color: 'hover:text-yellow-500' },
     { name: 'Reddit', icon: <ExternalLink />, url: 'https://www.reddit.com/user/cenation_rishi/', color: 'hover:text-orange-500' },
-    { name: 'Instagram', icon: <Instagram />, url: 'https://www.instagram.com/cenation_rishi/', color: 'hover:text-pink-500' }
+    { name: 'Instagram', icon: <Instagram />, url: 'https://www.instagram.com/cenation_rishi/', color: 'hover:text-pink-500' },
+    { name: 'Peerlist', icon: <ExternalLink />, url: 'https://peerlist.io/rishi31', color: 'hover:text-green-500'}
   ];
 
   const handleSubmit = async (e) => {
