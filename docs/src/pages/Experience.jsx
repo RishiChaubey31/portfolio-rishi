@@ -18,6 +18,13 @@ const Experience = () => {
       githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1322/",
       tags: ["TypeScript", "Jest", "Unit Testing", "React"],
     },
+    {
+      title: "Ember JS to React JS Migration",
+      description:
+        "Worked on migrating two major features i.e the 'change task status functionality and the 'extension request' functionality from Ember JS to React JS, enhancing the user experience and performance of the Real Dev Squad website.",
+      githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1347/",
+      tags: ["TypeScript", "Jest", "Unit Testing", "React","next.js",'RTK Query','moment js', 'react-hook-form', 'react-toastify','stacking PRs'],
+    },
   ];
 
   return (
@@ -54,8 +61,7 @@ const Experience = () => {
           </a>
         </motion.div>
         <p className="text-slate-300 text-center mb-6">
-          Contributing to improving the Real Dev Squad Discord bot with new
-          features and optimizations.
+          Contributing to open source projects has been a transformative experience for me. It has not only enhanced my technical skills but also allowed me to collaborate with talented developers from around the world. Here are some of my contributions:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
