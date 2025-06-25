@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 
@@ -21,9 +20,44 @@ const Experience = () => {
     {
       title: "Ember JS to React JS Migration",
       description:
-        "Worked on migrating two major features i.e the 'change task status functionality and the 'extension request' functionality from Ember JS to React JS, enhancing the user experience and performance of the Real Dev Squad website.",
-      githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1347/",
+        "Migrated the Task Status dropdown component from Ember JS to React JS, enhancing the user interface and functionality.",
+      githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1341",
       tags: ["TypeScript", "Jest", "Unit Testing", "React","next.js",'RTK Query','moment js', 'react-hook-form', 'react-toastify','stacking PRs'],
+    },
+     {
+      title: "Ember JS to React JS Migration",
+      description:
+        "Migrated the Extension Request button and modal component from Ember JS to react JS and added some of my own creativity to it to enhance UI.",
+      githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1347",
+      tags: ["TypeScript", "Jest", "Unit Testing", "React","next.js",'RTK Query','moment js', 'react-hook-form', 'react-toastify','stacking PRs'],
+    },
+      {
+      title: "Ember JS to React JS Migration",
+      description:
+        "Migrated the Extension Request Form from Ember JS to React JS, ensuring a user can fill the form with new dates and reason for extension and submit it.",
+      githubUrl: "https://github.com/Real-Dev-Squad/website-status/pull/1353",
+      tags: ["TypeScript", "Jest", "Unit Testing", "React","next.js",'RTK Query','moment js', 'react-hook-form', 'react-toastify','stacking PRs'],
+    },
+      {
+      title: "E2E Testing Environment Setup using Playwright",
+      description:
+        "Setup the e2e testing environment ",
+      githubUrl: "https://github.com/Real-Dev-Squad/FMP-Web-UI/pull/10",
+      tags: ["TypeScript", "Playwright","tanstack router",],
+    },
+     {
+      title: "Setup ShadCN UI in the RDS fund management portal",
+      description:
+        "ShadCn UI is a component library that provides a set of pre-designed components for building user interfaces in React applications. It is built on top of Tailwind CSS and provides a set of customizable components that can be easily integrated into your application.",
+      githubUrl: "https://github.com/Real-Dev-Squad/FMP-Web-UI/pull/14",
+      tags: ["TypeScript", "Playwright","tanstack router",],
+    },
+     {
+      title: "Create DashBoard for the university view in the RDS fund management portal",
+      description:
+        "Created a dashboard for the university view in the RDS fund management portal, allowing universities to view their fund requests and status. Created different charts and tables to display the data in a user-friendly manner.",
+      githubUrl: "https://github.com/Real-Dev-Squad/FMP-Web-UI/pull/29",
+      tags: ["TypeScript", "Playwright","tanstack router","rechart.js","react-table","shadcn ui","lucide-react","react js"],
     },
   ];
 
@@ -56,7 +90,7 @@ const Experience = () => {
             <img
               src="./rds.png"
               alt="Description"
-              class="w-48 h-40 "
+              className="w-48 h-40 "
             />
           </a>
         </motion.div>
