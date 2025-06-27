@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link
 import { Menu, X } from "lucide-react";
 import { HoverBorderGradient } from "./hover-border-gradient";
@@ -22,8 +22,8 @@ function NavBar() {
   return (
     <nav className="bg-transparent text-white fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-3">
-        {/* Container with right alignment */}
-        <div className="flex justify-end items-center">
+        {/* Container with center alignment */}
+        <div className="flex justify-center items-center">
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-4 text-lg font-semibold">
             {navLinks.map(({ name, path }) => (

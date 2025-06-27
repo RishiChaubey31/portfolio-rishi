@@ -15,7 +15,7 @@ import Blogs from "./pages/Blogs";
 const images = [
   { src: "/spacemen.png", sound: "/hello1.mp3" },
   { src: "/spacemen.png", sound: "/hello2.mp3" },
-  { src: "/planet-1.png", sound: "/jadu.mp3" },
+  // { src: "/planet-1.png", sound: "/jadu.mp3" },
   { src: "/planet-2.png", sound: "/jadu.mp3" },
   { src: "/planet-3.png", sound: "/jadu.mp3" },
   { src: "/planet-4.png", sound: "/jadu.mp3" },
@@ -105,11 +105,11 @@ function App() {
 
       {/* Main Content */}
       <div className="main-content">
-        <img
+        {/* <img
           src="/signature.png"
           alt="Space Background"
           className="absolute top-0 left-0 w-auto h-auto"
-        />
+        /> */}
 
         <NavBar />
 

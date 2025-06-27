@@ -66,7 +66,9 @@ const Home = () => {
           transition={{ delay: 1, duration: 2 }}
           className="mt-4 md:mt-8 text-lg md:text-xl text-gray-300 font-light tracking-wide"
         >
-          Experience the journey of my comsic portfolio
+         <span className="text-yellow-400 text-4xl">Hi, I am Rishi 👨‍🚀</span>
+         <br />
+         <span>Experience the journey of my cosmic portfolio</span>
         </motion.p>
 
         {/* Button */}
